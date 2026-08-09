@@ -1,6 +1,7 @@
 # VYBE Frontend
 
 A modern entertainment discovery and booking frontend built with React, Vite, Tailwind CSS, React Router, Framer Motion, React Hook Form, and Lucide React.
+This is a bookmyshow with a GENZ twist
 
 ## Run locally
 
