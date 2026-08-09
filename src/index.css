@@ -1,0 +1,246 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* =========================================================
+   DARK THEME
+   ========================================================= */
+
+:root {
+
+  /* Background */
+  --bg-primary: #050505;
+  --bg-secondary: #0b0b0b;
+  --bg-card: #111111;
+  --bg-elevated: #181818;
+
+  /* Text */
+  --text-primary: #ffffff;
+  --text-secondary: #d4d4d8;
+  --text-muted: #a1a1aa;
+
+  /* Borders */
+  --border-color: rgba(255, 255, 255, 0.10);
+
+  /* Accent */
+  --accent: #ffffff;
+  --accent-text: #000000;
+}
+
+
+/* =========================================================
+   LIGHT THEME
+   ========================================================= */
+
+[data-theme="light"] {
+
+  /* Background */
+  --bg-primary: #f6f5f1;
+  --bg-secondary: #ecebe6;
+  --bg-card: #ffffff;
+  --bg-elevated: #f1f0eb;
+
+  /* Text */
+  --text-primary: #111111;
+  --text-secondary: #3f3f46;
+  --text-muted: #71717a;
+
+  /* Borders */
+  --border-color: rgba(0, 0, 0, 0.09);
+
+  /* Accent */
+  --accent: #111111;
+  --accent-text: #ffffff;
+}
+
+
+/* =========================================================
+   GLOBAL
+   ========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+body {
+
+  margin: 0;
+
+  min-width: 320px;
+
+  background: var(--bg-primary);
+
+  color: var(--text-primary);
+
+  font-family: "DM Sans", sans-serif;
+
+  font-synthesis: none;
+
+  text-rendering: optimizeLegibility;
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+
+}
+
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+
+button {
+  cursor: pointer;
+}
+
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+
+a {
+  text-decoration: none;
+}
+
+
+::selection {
+  background: var(--text-primary);
+  color: var(--bg-primary);
+}
+
+
+/* =========================================================
+   DISPLAY FONT
+   ========================================================= */
+
+.display-font {
+  font-family: "Space Grotesk", sans-serif;
+}
+
+
+/* =========================================================
+   HIDE SCROLLBAR
+   ========================================================= */
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
+}
+
+
+/* =========================================================
+   GLASS
+   ========================================================= */
+
+.glass {
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+
+  background: rgba(255, 255, 255, 0.06);
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hero-grid {
+
+  background-image:
+    linear-gradient(
+      rgba(255, 255, 255, 0.035) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.035) 1px,
+      transparent 1px
+    );
+
+  background-size: 56px 56px;
+}
+
+
+/* =========================================================
+   HERO IMAGE OVERLAY
+   IMPORTANT:
+   This remains dark in LIGHT MODE too.
+   ========================================================= */
+
+.hero-overlay-left {
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.78) 0%,
+      rgba(0, 0, 0, 0.55) 45%,
+      rgba(0, 0, 0, 0.18) 100%
+    );
+}
+
+
+.hero-overlay-bottom {
+
+  background:
+    linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.75) 0%,
+      rgba(0, 0, 0, 0.15) 60%,
+      rgba(0, 0, 0, 0.15) 100%
+    );
+}
+
+
+/* =========================================================
+   HERO TEXT
+   ALWAYS WHITE
+   ========================================================= */
+
+.hero-title {
+  color: #ffffff;
+}
+
+
+.hero-description {
+  color: rgba(255, 255, 255, 0.80);
+}
+
+
+.hero-muted {
+  color: rgba(255, 255, 255, 0.60);
+}
+
+
+/* =========================================================
+   THEME TRANSITION
+   ========================================================= */
+
+.theme-transition,
+.theme-transition * {
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease;
+
+}
